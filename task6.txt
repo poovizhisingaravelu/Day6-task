@@ -1,0 +1,111 @@
+
+1.Class - Movie
+
+class Movie
+  {
+    
+  constructor(title='',studio='',rating='PG')
+      {
+    
+      this.title=title;
+          this.studio=studio;
+       
+   this.rating=rating;
+          
+      }
+      getPG(movie=[],rating='')
+    
+  {
+          return movie.filter((m) => m.rating === rating); 
+      }
+  }
+  
+const casionRoyaleMovie = new Movie('Casino Royale', 'Eon Productions', 'PG13'); 
+
+const leo = new Movie('Leo', 'LCU', 'PG'); 
+
+const vikram = new Movie('Vikram', 'Rajkamal production', 'PG'); 
+
+const avatar = new Movie('Avatar: The water way', 'EROS', 'PG13'); 
+
+const avengers = new Movie('The avengers: End Game', 'LCU', 'PG'); 
+c
+onst roja=new Movie('roja','AVM','R');
+const ps=new Movie('ponniyenselvan','Lyca production','R');
+
+const moviesArray = [casionRoyaleMovie, leo, vikram, avatar, avengers,roja,ps];
+ 
+console.log(casionRoyaleMovie.getPG(moviesArray, 'R')); 
+
+console.log(casionRoyaleMovie.getPG(moviesArray, 'PG')); 
+----------------------------------------------------------------------------------------------------
+2.class-circle
+class circle {
+  constructor (radius,color) {
+    
+this.radius = radius;
+    this.color=color;
+  }
+  
+getarea()
+ {
+    
+return Math.PI * Math.pow(this.radius, 2);
+  }
+  getperimeter() {
+   
+ return 2 * Math.PI * this.radius;
+  }
+}
+
+
+
+let circy1 = new circle(4);
+console.log(circy1.getarea());
+console.log(circy1.getperimeter());
+	 
+--------------------------------------------------------------------------------------------------------
+3.Write a “person” class to hold all the details.
+class person
+  {
+      constructor(fname,lastname,sex,address,phone)
+      {
+    
+      this.fname=fname;
+          this.lastname=lastname;
+          this.sex=sex;
+        
+  this.address=address;
+          this.phone=phone;
+      }
+     
+  }
+
+const per1=new person("poovizhi",'singaravelu','female','singapore','2334887677');
+
+const per2=new person("singaravelu",'ramalingam','male','singapore','6556772738');
+console.log(per1);
+-------------------------------------------------------------------------------------------------------
+4.write a class to calculate the uber price
+class uber
+  {
+      constructor(distance,gst=6,amtperkg=5)
+   
+   {
+          this.distance=distance;
+          this.gst=gst;
+        
+  this.amtperkg=amtperkg;
+          
+      }
+    getamt(){
+        
+   
+  return (distance*amtperkg)+gst;
+    }
+   
+_____________________________________________________________________________________________________
+  
+  }
+  let  total = new uber(4);
+console.log(total.getamt);
